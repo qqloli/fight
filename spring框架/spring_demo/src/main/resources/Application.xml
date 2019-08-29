@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--扫描组件的包目录-->
+    <!--<context:component-scan base-package="com.zj"/>-->
+    <bean name="source" class="com.zj.Source" autowire="byType">
+
+        <property name="fruit" value="橙子"/>
+        <property name="sugar" value="多糖"/>
+        <property name="size" value="超大杯"/>
+    </bean>
+
+    <bean name="consumer" class="com.zj.Consumer" autowire="byType">
+        <property name="id" value="123"/>
+        <property name="name" value="Zj"/>
+    </bean>
+
+    <!--<bean name="consumer1" class="com.zj.Consumer">-->
+        <!--<property name="id" value="123"/>-->
+        <!--<property name="name" value="Zj"/>-->
+    <!--</bean>-->
+</beans>

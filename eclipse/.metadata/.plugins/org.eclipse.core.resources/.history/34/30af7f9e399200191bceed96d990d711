@@ -1,0 +1,32 @@
+package com.lyy.service;
+
+import javax.annotation.Resource;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lyy.dao.UserDao;
+import com.lyy.pojo.User;
+
+@Service
+public class UserService {
+
+	@Autowired
+    private UserDao userDao;
+	
+	public boolean login(User user){
+	 boolean is =	userDao.findUser(user);
+		return is;
+	}
+	
+	
+	public void register(User user){
+		  	userDao.addUser(user);
+			 
+	}
+	
+	
+	
+	
+}

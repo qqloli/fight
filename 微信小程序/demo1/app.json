@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/talk/talk",
+    "pages/find/find",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00FF00"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "/images/icon/首页.png",
+        "iconPath": "/images/icon/首页.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/images/icon/消息.png",
+        "iconPath": "/images/icon/消息.png",
+        "pagePath": "pages/talk/talk",
+        "text": "微聊"
+      },
+      {
+        "selectedIconPath": "/images/icon/查找.png",
+        "iconPath": "/images/icon/查找.png",
+        "pagePath": "pages/find/find",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "/images/icon/我的.png",
+        "iconPath": "/images/icon/我的.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

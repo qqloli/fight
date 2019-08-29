@@ -1,0 +1,39 @@
+package com.lyy.dao;
+
+import javax.annotation.Resource;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lyy.pojo.User;
+
+@Service
+public class UserDao {
+	@Autowired
+    private SessionFactory sessionFactory;
+    /**
+     * 增加用户
+     */
+    @Transactional
+    public void addUser() {
+        // TODO Auto-generated method stub
+        Session session=sessionFactory.getCurrentSession();
+        session.save(new User("lyy", "123"));
+        session.save(new User("zj", "1223"));
+        
+    }
+    
+    public void findUser(){
+    	 String hql = "from Staff";
+         Query hqlQuery = session.createQuery(hql);
+         List<Staff> list = hqlQuery.list();
+         for(Staff staff : list){
+             System.out.println(staff.toString());
+         }
+    }
+    
+
+}

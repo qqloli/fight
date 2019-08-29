@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 
+    package="com.lyy.pojo">
+    <class name="User" table="user" lazy="true">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="name"  type="java.lang.String"
+                
+                length="25"
+                column="name"/>
+         
+        <property name="number"  type="java.lang.Integer"
+                
+                length="25"
+                column="number"/>
+         
+        <property name="package"  type="java.lang.String"
+                
+                length="25"
+                column="package"/>
+        <property name="reason"  type="java.lang.String"
+                 
+                length="25"
+                column="reason"/>
+         
+        <property name="leaveDate"  type="java.util.Date"
+                
+                column="leaveDate"/>
+         
+    </class>
+</hibernate-mapping>

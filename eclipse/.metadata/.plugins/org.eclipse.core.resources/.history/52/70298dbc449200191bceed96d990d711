@@ -1,0 +1,114 @@
+package com.lyy.controller;
+
+ 
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.lyy.dao.UserDao;
+import com.lyy.pojo.Pwd;
+import com.lyy.pojo.User;
+import com.lyy.service.AdminService;
+import com.lyy.service.UserService;
+import com.opensymphony.xwork2.ActionContext;
+
+public class UserAction {
+    private User user;
+    private Integer type;
+    private Pwd pwd;
+
+   
+	
+	@Autowired
+    private UserService userService;
+	
+	@Autowired
+    private AdminService adminService;
+    
+    public String login() throws Exception{
+    	
+    	
+        if(type==1){
+        	if(adminService.login(user)==null){
+            	return "fail";
+            }else{
+            	Map session = ActionContext.getContext().getSession();  
+            	session.put("admin", adminService.login(user));  
+            	return "adminsuccess";
+            }
+        } else{
+        	 
+        	if(userService.login(user)==null){
+        		return "fail";
+            }else{
+            	Map session = ActionContext.getContext().getSession();  
+            	session.put("user", userService.login(user));  
+            	return "success";
+            }
+        }
+        
+        
+    }
+    
+    public String register() throws Exception{
+        
+         userService.register(user);
+        	return "success";
+        
+        
+    }
+    
+    public String change() throws Exception{
+    	Map session = ActionContext.getContext().getSession();  
+    	User u =(User) session.get("user");
+    	
+    	if(this.pwd.getPassword().equals(u.getPwd())){
+    		if(this.pwd.getPassword1().equals(this.pwd.getPassword2())){
+    			User u1 =new User();
+    	    	u1.setName(u.getName());
+    	        u1.setPwd(this.pwd.getPassword1());
+    	        userService.change(u1);
+    	        u.setPwd(this.pwd.getPassword1());
+    	        session.put("user", u);
+    	       	return "success";
+    		}else{
+    			session.put("changeErr", "»∑»œ√‹¬Î≤ª“ª÷¬");
+    			return "fail";
+    		}
+    	}else{
+    		session.put("changeErr", "æ…√‹¬Î¥ÌŒÛ");
+    		return "fail";
+    	}
+    	
+       
+       
+   }
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	 public Integer getType() {
+			return type;
+		}
+
+		public void setType(Integer type) {
+			this.type = type;
+		}
+
+		public Pwd getPwd() {
+			return pwd;
+		}
+
+		public void setPwd(Pwd pwd) {
+			this.pwd = pwd;
+		}
+
+ 
+    
+
+}

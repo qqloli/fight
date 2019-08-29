@@ -1,0 +1,111 @@
+package com.lyy.pojo;
+
+public class User {
+   public int id;
+   
+   public String name;
+   
+   public String pwd;
+   
+   public int sexual;
+   
+   public int number;
+   
+   public int grade;
+   
+   public String zhunye;
+   
+   public String class_;
+   
+   public String gongyu;
+   
+   public String roomno;
+    
+   public User(){
+	    
+   }
+   
+   public User(String name,String pwd){
+	   this.name=name;
+	   this.pwd=pwd;
+   }
+   
+   
+   public int getSexual() {
+	return sexual;
+}
+
+public void setSexual(int sexual) {
+	this.sexual = sexual;
+}
+
+public int getNumber() {
+	return number;
+}
+
+public void setNumber(int number) {
+	this.number = number;
+}
+
+public int getGrade() {
+	return grade;
+}
+
+public void setGrade(int grade) {
+	this.grade = grade;
+}
+
+public String getZhunye() {
+	return zhunye;
+}
+
+public void setZhunye(String zhunye) {
+	this.zhunye = zhunye;
+}
+
+public String getClass_() {
+	return class_;
+}
+
+public void setClass_(String class_) {
+	this.class_ = class_;
+}
+
+public String getGongyu() {
+	return gongyu;
+}
+
+public void setGongyu(String gongyu) {
+	this.gongyu = gongyu;
+}
+
+public String getRoomno() {
+	return roomno;
+}
+
+public void setRoomno(String roomno) {
+	this.roomno = roomno;
+}
+
+
+   
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+   
+}

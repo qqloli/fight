@@ -1,0 +1,20 @@
+package com.lyy.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lyy.dao.AdminDao;
+import com.lyy.dao.UserDao;
+import com.lyy.pojo.User;
+
+@Service
+public class AdminService {
+
+	@Autowired
+    private AdminDao adminDao;
+	
+	public boolean login(User user){
+	 boolean is =	adminDao.findUser(user);
+		return is;
+	}
+}

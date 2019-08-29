@@ -1,0 +1,55 @@
+package com.lyy.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.lyy.dao.UserDao;
+import com.lyy.service.UserService;
+
+public class UserAction {
+    private String name;
+    private String pwd;
+
+    @Autowired
+    private UserService userService;
+    
+    public String login() throws Exception{
+         
+        if(userService.login(name, pwd)){
+        	return "success";
+        }else{
+        	return "fail";
+        }
+        
+    }
+    
+    public String register() throws Exception{
+        
+         userService.register(name, pwd);
+        	return "success";
+        
+        
+    }
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getPwd() {
+		return pwd;
+	}
+
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+    
+
+}

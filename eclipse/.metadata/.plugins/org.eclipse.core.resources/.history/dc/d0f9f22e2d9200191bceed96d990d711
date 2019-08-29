@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 
+    package="com.lyy.pojo">
+    <class name="User" table="user" lazy="true">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="name"  type="java.lang.String"
+                not-null="true"
+                length="25"
+                column="name"/>
+        <property name="pwd"  type="java.lang.String"
+                not-null="true"
+                length="25"
+                column="pwd"/>
+                
+        <property name="sexual"  type="java.lang.String"
+                not-null="true"
+                length="25"
+                column="sexual"/>
+        <property name="number"  type="java.lang.int"
+                not-null="true"
+                length="25"
+                column="number"/>
+        <property name="grade"  type="java.lang.int"
+                not-null="true"
+                length="25"
+                column="grade"/>
+        <property name="zhunye"  type="java.lang.String"
+                not-null="true"
+                length="25"
+                column="zhunye"/>
+        <property name="class_"  type="java.lang.String"
+                not-null="true"
+                length="25"
+                column="class_"/>
+        <property name="gongyu"  type="java.lang.String"
+                not-null="true"
+                length="25"
+                column="gongyu"/>
+        <property name="roomno"  type="java.lang.String"
+                not-null="true"
+                length="25"
+                column="roomno"/>
+        <property name="lastDate"  type="java.util.Date"
+                not-null="true"
+                column="lastDate"/>
+    </class>
+</hibernate-mapping>

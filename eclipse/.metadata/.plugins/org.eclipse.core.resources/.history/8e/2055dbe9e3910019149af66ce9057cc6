@@ -1,0 +1,13 @@
+package com.lyy.service;
+
+import javax.annotation.Resource;
+
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+
+	@Resource
+    private SessionFactory sessionFactory;
+}

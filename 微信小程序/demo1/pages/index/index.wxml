@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='headContainer'>
+    <text class='company-text'>安居客</text>
+    <view class='select-contianer'>
+    <text>北京</text>
+    <image src='/images/icon/下箭头.png'></image>
+    <text>安心挑好房，当然安居客</text>
+    </view>
+  </view>
+
+  <view class='plate'>
+     <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a1src}}"></image>
+     </view>
+     <text class='plate-info'>新房</text>
+     </navigator>
+    
+     <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a2src}}"></image>
+     </view>
+     <text class='plate-info'>二手房</text>
+     </navigator>
+
+     <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a3src}}"></image>
+     </view>
+     <text class='plate-info'>租房</text>
+     </navigator>
+
+     <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a4src}}"></image>
+     </view>
+     <text class='plate-info'>小区</text>
+     </navigator>
+
+     <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a5src}}"></image>
+     </view>
+     <text class='plate-info'>房产专家</text>
+     </navigator>
+  </view>
+
+  <view class='plate'>
+
+    <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a6src}}"></image>
+     </view>
+     <text class='plate-info'>视频</text>
+     </navigator>
+  
+   <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a7src}}"></image>
+     </view>
+     <text class='plate-info'>资讯</text>
+    </navigator>
+
+    <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a8src}}"></image>
+     </view>
+     <text class='plate-info'>房价</text>
+     </navigator>
+
+    <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a9src}}"></image>
+     </view>
+     <text class='plate-info'>算房贷</text>
+     </navigator>
+
+    <navigator class='plate-item'>
+     <view class='plate-img'>
+     <image src="{{a10src}}"></image>
+     </view>
+     <text class='plate-info'>估房价</text>
+    </navigator>
+  
+  </view>
+    
+     
+</view>
