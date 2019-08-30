@@ -1,8 +1,0 @@
-package com.lyy.dao;
-
-public class Test {
-private void mian() {
-	 UserDao userDao = new UserDao();
-	 userDao.addUser();
-}
-}

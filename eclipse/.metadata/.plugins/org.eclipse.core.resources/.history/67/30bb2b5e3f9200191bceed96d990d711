@@ -1,8 +1,0 @@
-package com.lyy.pojo;
-
-public class Pwd {
-
-	public String password;
-	public String password1;
-	public String password2;
-}
